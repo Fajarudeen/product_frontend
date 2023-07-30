@@ -51,18 +51,15 @@ function AddProduct() {
                 .then((result) => (
                     toast.success(result.data.message)
                 ))
-            setTimeout(() => {
-                navigate('/add');
-            }, 5000);
-
-            // Handle the response if needed
-            console.log('Product creation successful:', response.data);
-
+                setTimeout(() => {
+                    navigate('/');
+                }, 5000);
         } catch (error) {
             // Handle errors here
             toast.error(error)
             console.error('Error creating product:', error);
         }
+        
     };
 
     return (
